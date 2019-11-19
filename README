@@ -1,0 +1,17 @@
+Configuring and installing QJackMMC / jackctlmmc:
+
+When installing a program from source, it's typical to run, "./configure; make; make install" and this program is no exception. A couple of notes though:
+
+- configure will use the standard prefix of "/usr/local" to install your program(s) icon, and .desktop file. Again, this is standard, but it's probably not what you want. The typical spot for a distribution's programs to go, is "/usr" not "/usr/local". If you want to install to "/usr" please pass it as a prefix to configure like this: ./configure --prefix='/usr'
+
+- QJackMMC and jackctlmmc are two sides of the same coin, and are both made and installed by default. But um, maybe you want a one-sided coin. If you just want the GUI program QJackMMC to be installed without jackctlmmc, pass '--enable-cli="no"' to configure. If you want jackctlmmc without QJackMMC, pass "--enable-gui="no"' to configure.
+
+- you can disable Lash support with: ./configure --enable-lash="no"
+
+- you can disable Jack MIDI support with: ./configure --enable-jackmidi="no"
+
+- configure has a lot of standard options not outlined here. Please run this for full information: ./configure --help
+
+- Please visit the project page at http://jackctlmmc.sourceforge.net for a FAQ and contact information if  you have issues.
+
+- Enjoy!

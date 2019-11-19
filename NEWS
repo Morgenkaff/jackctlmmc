@@ -1,0 +1,25 @@
+What's new in QJackMMC / JackCtlMMC:
+
+version 4:
+- added Jack MIDI support to QJackMMC / jackctlmmc
+- near complete overhaul of QJackMMC, especially "always listening" feature
+- added autoconf support for easy packaging
+- made Lash optional via ./configure
+- new icon
+
+version 3:
+- Added device ID support (formerly listened to ID 7f only)
+- Added Help->About and Help->What's This
+- Made the makefile more robust for easier building
+- Fixed Lash startup bug
+- Fixed Jack disconnect bug
+
+version 2:
+- Initial release of QJackMMC
+- Separated core functionality from main.c so that code could be shared between QJackMMC and JackCtlMMC
+
+version 1:
+- Added support for MMC Goto and Deferred play commands
+
+version 0:
+- Initial JackCtlMMC release supporting Play, Stop, and Rewind commands

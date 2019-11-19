@@ -1,0 +1,12 @@
+- upload tarball
+- make / test ebuild for pro-audio overlay
+- tag repository
+- update screenshots
+- update documentation: mention prefix's bad default value, remove references to "listening", change "code" to "control".
+- announce
+- hunt down clock drift on subsequent play/stop gotos
+- change verbose checkbox to dropdown with output levels: normal, verbose, silent
+- use XML for settings
+- handle messages from JACK Re: close, disconnect, etc.
+- JACK session support
+- make ALSA MIDI optional

@@ -1,0 +1,3 @@
+// DON'T remove the quotes around this string, QJackMMC relies on them.
+
+"QJackMMC / JackCtlMMC version 4 written by Alex Montgomery and Nedko Arnaudov. This application lets you drive JACK transport by connecting devices or programs that send Midi Machine Code."

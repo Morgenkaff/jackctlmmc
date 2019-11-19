@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QjackMMC</class>
+ <widget class="QMainWindow" name="QjackMMC">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>419</width>
+    <height>362</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>419</width>
+    <height>335</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>419</width>
+    <height>32767</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>QjackMMC</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetFixedSize</enum>
+      </property>
+      <item row="1" column="1">
+       <widget class="QLabel" name="fpsLabel">
+        <property name="whatsThis">
+         <string>The framerate (number of frames per second) of the device(s) connected to QjackMMC</string>
+        </property>
+        <property name="lineWidth">
+         <number>2</number>
+        </property>
+        <property name="text">
+         <string>&amp;Frames / sec</string>
+        </property>
+        <property name="buddy">
+         <cstring>fpsEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLineEdit" name="jitterEdit">
+        <property name="whatsThis">
+         <string>The maximum allowable difference between the JACK transport position and the time specified by an incoming MMC locate messages without changing the JACK position.</string>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string>50</string>
+        </property>
+        <property name="maxLength">
+         <number>5</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="jittterLabel">
+        <property name="whatsThis">
+         <string>The maximum allowable difference between the JACK transport position and the time specified by an incoming MMC locate messages without changing the JACK position.</string>
+        </property>
+        <property name="text">
+         <string> &amp;Jitter tolerance (ms)</string>
+        </property>
+        <property name="buddy">
+         <cstring>jitterEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="fpsEdit">
+        <property name="whatsThis">
+         <string>The framerate (number of frames per second) of the device(s) connected to QjackMMC</string>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string>30</string>
+        </property>
+        <property name="maxLength">
+         <number>4</number>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QPushButton" name="loadButton">
+        <property name="whatsThis">
+         <string>Load your last saved settings from ~/.qjackmmc</string>
+        </property>
+        <property name="text">
+         <string>&amp;Load saved defaults</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QPushButton" name="saveButton">
+        <property name="whatsThis">
+         <string>Save your current settings to ~/.qjackmmc</string>
+        </property>
+        <property name="text">
+         <string>Save as &amp;Default settings</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLineEdit" name="deviceEdit">
+        <property name="whatsThis">
+         <string>The device ID of the MIDI device controlling QJackMMC. If you don't know, it's probably 7f.</string>
+        </property>
+        <property name="text">
+         <string>7f</string>
+        </property>
+        <property name="maxLength">
+         <number>2</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="deviceLabel">
+        <property name="whatsThis">
+         <string>The device ID of the MIDI device controlling QJackMMC. If you don't know, it's probably 7f.</string>
+        </property>
+        <property name="text">
+         <string>Device &amp;ID in hexadecimal</string>
+        </property>
+        <property name="buddy">
+         <cstring>deviceEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="whatsThisButton">
+        <property name="whatsThis">
+         <string>It shows you messages like this. Now try clicking this then something else you want to know about.</string>
+        </property>
+        <property name="text">
+         <string>&amp;What does that do?</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QCheckBox" name="verboseBox">
+        <property name="whatsThis">
+         <string>Check this to output verbose messages to the message area below.</string>
+        </property>
+        <property name="text">
+         <string>&amp;Verbose output</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="rtBox">
+      <property name="whatsThis">
+       <string>Check this to schedule alsa sequencer polling with the highest allowable thread priority.</string>
+      </property>
+      <property name="text">
+       <string>Use &amp;high priority thread for alsa polling</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="messageArea">
+      <property name="whatsThis">
+       <string>if &quot;Verbose output&quot; is checked, text about any received MMC messages will appear here.</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>419</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuQJackMMC">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>&amp;QJackMMC</string>
+    </property>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionWhat"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuQJackMMC"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionWhat">
+   <property name="text">
+    <string>&amp;What's This?</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>fpsEdit</tabstop>
+  <tabstop>jitterEdit</tabstop>
+  <tabstop>deviceEdit</tabstop>
+  <tabstop>loadButton</tabstop>
+  <tabstop>saveButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

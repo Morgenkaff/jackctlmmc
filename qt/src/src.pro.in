@@ -1,0 +1,28 @@
+SOURCES += main.cpp \
+ mainWindow.cpp \
+ ../../common.c \
+ validator.cpp \
+ sequencerThread.cpp
+
+HEADERS += mainWindow.h \
+ validator.h \
+ sequencerThread.h \
+ ../../common.h \
+ ../../config.h
+
+FORMS += qjackmmc.ui
+
+TEMPLATE = app
+CONFIG += warn_on \
+	  thread \
+          qt \
+	  @ac_debug@ \
+          link_pkgconfig
+
+PKGCONFIG += @ac_pkgs@
+TARGET = qjackmmc
+DESTDIR = ../../
+QT += gui
+
+QMAKE_CFLAGS += $$(CFLAGS)
+QMAKE_CXXFLAGS += $$(CFLAGS)
